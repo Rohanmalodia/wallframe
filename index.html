@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>&lt;model-viewer&gt; template</title>
+    <title>&lt;Frame-viewer&gt; template</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,10 +11,12 @@
   </head>
   <body>
     <!-- <model-viewer> HTML element -->
-    <model-viewer bounds="tight" src="boom_2_.glb" ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.jpeg" shadow-intensity="1" exposure="0.91">
+    <model-viewer bounds="tight"  id="lazy-load"  src="boom_2_.glb" ar ar-placement="wall" ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.jpeg" shadow-intensity="1" exposure="0.91">
       <div class="progress-bar hide" slot="progress-bar">
           <div class="update-bar"></div>
       </div>
+       <div id="lazy-load-poster" slot="poster"></div>
+       <div id="button-load" slot="poster">Load 3D Model</div>
       <button slot="ar-button" id="ar-button">
           View in your space
       </button>
